@@ -74,13 +74,6 @@
     document.addEventListener("DOMContentLoaded", function () {
       let lazyVideos = document.querySelectorAll("video.lazy-video");
 
-      lazyVideos.forEach(video => {
-        // Force play the video
-        video.play().catch(error => {
-          console.log("Autoplay prevented:", error);
-        });
-      });
-
       let observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -88,10 +81,7 @@
             let source = video.querySelector("source");
             if (source.dataset.src) {
               source.src = source.dataset.src;
-              video.load();
-              video.play().catch(error => {
-                console.log("Autoplay prevented:", error);
-              });
+              video.load(); // Load and play the video
             }
             observer.unobserve(video);
           }
