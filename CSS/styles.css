@@ -398,7 +398,7 @@ video {
     justify-content: flex-end;
 
     flex: 1;
-    padding-left: 1rem;
+    padding-left: 3rem;
   }
 
   .navItems:nth-child(2) {
@@ -438,7 +438,7 @@ video {
     justify-content: flex-start;
 
     flex: 1;
-    padding-left: 1rem;
+    padding-left: 3rem;
   }
 
   .navItems:nth-child(2) {
