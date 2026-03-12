@@ -134,14 +134,31 @@ video {
   color: #1f3e44ac;
 }
 
+/* Active link styling */
+.nav-link.active {
+  color: #091113ac !important;
+  font-weight: 600;
+}
+
+/* Hover effect for non-active links */
+.nav-link:not(.active):hover {
+  color: #172528ac !important;
+}
 
 /* Default styles - no media query needed */
 
 /* Very small mobile devices (320px to 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
+  .video-container {
+height: 100vh;  
+}
+
+
   video {
-    margin-bottom: -1px;
-    margin-top: -1px;
+    /* margin-bottom: -1px;
+    margin-top: -1px; */
+    height: 100%;
+  
   }
 
   .navItems li {
