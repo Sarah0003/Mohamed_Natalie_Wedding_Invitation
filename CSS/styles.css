@@ -336,6 +336,34 @@ video {
 }
 
 
+/* Default styles - no media query needed */
+
+/* Very small mobile devices (320px to 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  video {
+    margin-bottom: -1px;
+    margin-top: -1px;
+  }
+
+  .navItems li {
+    padding: 0 0.2rem 0 0;
+  }
+
+  .navItems li a {
+    font-size: 0.55rem;
+    font-family: "source-serif-4-variable", sans-serif;
+    font-variation-settings: 'wght'400, 'opsz'20;
+  }
+
+  .navbar-brand-item li {
+    padding: 0 0.4rem;
+  }
+
+  .navbar-brand-item a img {
+    width: 0.7rem;
+  }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* Default styles - no media query needed */
 
@@ -365,9 +393,7 @@ video {
     align-items: center;
   }
 
-  .sec_1_link .button {
-    width: 40%;
-  }
+
 
   .sec_1_link {
     left: 61.5%;
