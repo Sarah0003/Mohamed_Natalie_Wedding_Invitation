@@ -254,7 +254,7 @@ video {
 
   section .container-fluid .row .col-sm-12 video {
     margin: auto;
-    width: 50%;
+    width: 81%;
     display: flex;
     justify-content: center;
     align-items: center;
