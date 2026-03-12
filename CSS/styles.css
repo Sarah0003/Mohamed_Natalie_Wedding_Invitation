@@ -1,0 +1,465 @@
+/* section {
+  overflow-y: hidden;
+
+}
+
+section .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.video-container {
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+section .container-fluid .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+section .container-fluid .row .col-sm-12 {
+  padding: 0;
+}
+
+section .container-fluid .row .col-sm-12 video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 80%;
+}
+
+.sec_1_link .button {
+  width: 75%;
+
+}
+
+.navbar-brand-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.sec_1_link {
+  top: 60%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+}
+
+
+.nav-icon img {
+  width: 2rem;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.navItems {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navItems li {
+
+  padding: 0 0.5rem 0 0;
+}
+
+
+.navItems li a {
+
+  font-size: 0.9rem;
+
+  font-family: "source-serif-4-variable", sans-serif;
+  font-variation-settings: 'wght'400, 'opsz'20;
+
+}
+
+.navbar-brand-item li {
+  padding: 0 2rem;
+}
+
+
+
+
+
+@media screen and (max-width:425px) {
+  video {
+    margin-bottom: -1px;
+    margin-top: -1px;
+
+  }
+
+
+  .nav-icon img {
+    width: 0.1rem;
+  }
+
+
+
+  .navItems li {
+
+    padding: 0 0.5rem 0 0;
+  }
+
+
+  .navItems li a {
+
+    font-size: 0.5rem;
+
+    font-family: "source-serif-4-variable", sans-serif;
+    font-variation-settings: 'wght'400, 'opsz'20;
+
+  }
+
+  .navbar-brand-item li {
+    padding: 0 1rem;
+  }
+}
+
+
+@media (min-width: 789px) {
+  section .container-fluid .row .col-sm-12 video {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .sec_1_link .button {
+    width: 40%;
+  }
+
+  .sec_1_link {
+    left: 61.5%;
+  }
+
+
+  .nav-icon img {
+    width: 0.1rem;
+  }
+
+
+
+  .navItems li {
+
+    padding: 0 0.5rem 0 0;
+  }
+
+
+  .navItems li a {
+
+    font-size: 0.7rem;
+
+    font-family: "source-serif-4-variable", sans-serif;
+    font-variation-settings: 'wght'400, 'opsz'20;
+
+  }
+
+
+
+  .navbar-brand-item a img {
+    width: 1rem;
+  }
+
+  .navbar-brand-item li {
+    padding: 0 1rem;
+  }
+}
+
+
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  video {
+    margin-bottom: -7px;
+    margin-top: -1px;
+
+  }
+} */
+
+section {
+  overflow-y: hidden;
+
+}
+
+section .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.video-container {
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+section .container-fluid .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+section .container-fluid .row .col-sm-12 {
+  padding: 0;
+}
+
+section .container-fluid .row .col-sm-12 video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 80%;
+}
+
+.sec_1_link .button {
+  width: 75%;
+
+}
+
+.navbar-brand-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*SECTION 1 LINK*/
+
+
+.sec_1_link {
+  top: 60%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+}
+
+
+.nav-icon img {
+  width: 1rem;
+}
+
+/* Default mobile styles for extra small devices (xs - below 576px) */
+video {
+  margin-bottom: -1px;
+  margin-top: -1px;
+
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.navItems {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navItems:first-child {
+  justify-content: flex-end;
+  flex: 1;
+  /* padding-left: 5rem; */
+}
+
+.navItems:nth-child(2) {
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.navItems:last-child {
+  justify-content: flex-start;
+  flex: 1;
+  /* padding-right: 5rem; */
+
+}
+
+.navItems li {
+  padding: 0 0.3rem 0 0;
+  color: #1F3E44;
+}
+
+.navItems li a {
+  font-size: 0.3rem;
+  font-family: "source-serif-4-variable", sans-serif;
+  font-variation-settings: 'wght'400, 'opsz'20;
+}
+
+.navbar-brand-item li {
+  padding: 0 0.5rem;
+}
+
+.navbar-brand-item a img {
+  width: 0.8rem;
+}
+
+.navbar-brand-item {
+  padding-right: 0;
+}
+
+.navItems li:hover a {
+  color: #1f3e44ac;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* Default styles - no media query needed */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .navItems li a {
+    font-size: 1rem;
+  }
+
+  .navbar-brand-item a img {
+    width: 1.2rem;
+  }
+
+  .navItems li {
+    padding: 0 0.9rem 0 0;
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  section .container-fluid .row .col-sm-12 video {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec_1_link .button {
+    width: 40%;
+  }
+
+  .sec_1_link {
+    left: 61.5%;
+  }
+
+  .navItems li {
+    padding: 0 0.5rem 0 0.5rem;
+  }
+
+  .navItems li a {
+    font-size: 2rem;
+    font-family: "source-serif-4-variable", sans-serif;
+    font-variation-settings: 'wght'400, 'opsz'20;
+  }
+
+  .navbar-brand-item a img {
+    width: 1rem;
+  }
+
+  /* 
+  .navbar-brand-item li {
+    padding: 0 1rem;
+  } */
+
+  .navbar-brand-item {
+    padding-right: 0;
+  }
+
+  .navItems li a {
+    font-size: 15rem;
+  }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navItems li a {
+    font-size: 0.8rem;
+  }
+
+  .navbar-brand-item a img {
+    width: 1.5rem;
+  }
+
+  .navbar-brand-item {
+    padding-right: 0;
+  }
+
+  .navItems li {
+    padding: 0 0.7rem 0 0.7rem;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .navItems li a {
+    font-size: 0.7rem;
+  }
+
+  .navbar-brand-item a img {
+    width: 2rem;
+  }
+
+  .navItems:first-child {
+    justify-content: flex-end;
+    flex: 1;
+    /* padding-left: 20rem; */
+  }
+
+  .navItems:nth-child(2) {
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .navItems:last-child {
+    justify-content: flex-start;
+    flex: 1;
+    /* padding-right: 20rem; */
+
+  }
+
+  .navbar-brand-item {
+    padding-right: 0;
+  }
+
+  .navItems li {
+    padding: 0 0.7rem 0 0;
+  }
+
+  .extra-link {
+    padding: 0 0rem 0 0.1rem;
+
+  }
+}
