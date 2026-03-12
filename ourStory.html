@@ -29,7 +29,7 @@
             <ul class="navbar-nav">
               <div class="navItems firstList">
                 <li class="nav-item">
-                  <a class="nav-link active" data-page="index.html" aria-current="page" href="">HOME</a>
+                  <a class="nav-link active" data-page="index.html" aria-current="page" href="index.html">HOME</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" data-page="ourStory.html" href="ourStory.html">OUR STORY</a>
@@ -69,29 +69,6 @@
   </section>
   <!-- END SECTION 1 -->
 
-  <!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let lazyVideos = document.querySelectorAll("video.lazy-video");
-
-      let observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            let video = entry.target;
-            let source = video.querySelector("source");
-            if (source.dataset.src) {
-              source.src = source.dataset.src;
-              video.load(); // Load and play the video
-            }
-            observer.unobserve(video);
-          }
-        });
-      });
-
-      lazyVideos.forEach(video => {
-        observer.observe(video);
-      });
-    });
-  </script> -->
 
   <script src="JS/index.js"></script>
 
