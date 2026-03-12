@@ -144,7 +144,7 @@ video {
 /* Very small mobile devices (320px to 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
   .video-container {
-    height: 100svh;
+    height: 100vh;
   }
 
 
