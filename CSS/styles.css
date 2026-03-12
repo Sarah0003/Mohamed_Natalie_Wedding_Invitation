@@ -143,10 +143,10 @@ video {
 
 /* Very small mobile devices (320px to 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
-  .video-container {
-    height: 100vh;
+  /* .video-container {
+    height: 120vh;
   }
-
+ */
 
   video {
     margin-bottom: -1px;
