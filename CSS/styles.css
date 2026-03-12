@@ -149,9 +149,9 @@ video {
 
 
   video {
-    margin-bottom: -1px;
-    margin-top: -1px;
-    /* height: 100%; */
+    /* margin-bottom: -1px;
+    margin-top: -1px; */
+    height: 100%;
 
   }
 
