@@ -387,12 +387,32 @@ video {
   .navbar-brand-item a img {
     width: 0.7rem;
   }
-  .firstList li{
-    padding-right:0.5rem ;
+
+  .firstList li {
+    padding-right: 0.5rem;
 
   }
 
 
+  .navItems:first-child {
+    justify-content: flex-start;
+
+    flex: 1;
+    padding-left: 1rem;
+  }
+
+  .navItems:nth-child(2) {
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .navItems:last-child {
+    justify-content: flex-end;
+
+    flex: 1;
+    padding-right: 1rem;
+
+  }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -410,6 +430,28 @@ video {
 
   .navItems li {
     padding: 0 0.9rem 0 0;
+  }
+
+
+
+  .navItems:first-child {
+    justify-content: flex-start;
+
+    flex: 1;
+    padding-left: 1rem;
+  }
+
+  .navItems:nth-child(2) {
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .navItems:last-child {
+    justify-content: flex-end;
+
+    flex: 1;
+    padding-right: 1rem;
+
   }
 
 }
