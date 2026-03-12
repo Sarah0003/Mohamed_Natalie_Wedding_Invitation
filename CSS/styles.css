@@ -155,6 +155,11 @@ video {
 
   }
 
+  .our-story {
+    margin-bottom: -1px;
+    margin-top: 0px;
+  }
+
   .navItems li {
     padding: 0 0.3rem 0 0;
   }
