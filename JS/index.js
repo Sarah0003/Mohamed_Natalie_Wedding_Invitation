@@ -1,47 +1,50 @@
-   // Set active navigation based on current page
-   document.addEventListener("DOMContentLoaded", function () {
-     // Get current page filename
-     let currentPage = window.location.pathname.split("/").pop();
+document.addEventListener("DOMContentLoaded", function () {
 
-     // If no specific page (root), default to index.html
-     if (currentPage === "" || currentPage === "/") {
-       currentPage = "index.html";
-     }
+  // =========================
+  // ✅ NAVBAR ACTIVE LOGIC
+  // =========================
+  let currentPage = window.location.pathname.split("/").pop();
 
-     // Get all nav links
-     let navLinks = document.querySelectorAll(".nav-link[data-page]");
+  if (currentPage === "" || currentPage === "/") {
+    currentPage = "index.html";
+  }
 
-     // Remove active class from all links
-     navLinks.forEach(link => {
-       link.classList.remove("active");
-     });
+  let navLinks = document.querySelectorAll(".nav-link[data-page]");
 
-     // Add active class to current page link
-     navLinks.forEach(link => {
-       if (link.getAttribute("data-page") === currentPage) {
-         link.classList.add("active");
-       }
-     });
+  navLinks.forEach(link => {
+    link.classList.remove("active");
 
-     // Lazy video loading
-     let lazyVideos = document.querySelectorAll("video.lazy-video");
+    if (link.getAttribute("data-page") === currentPage) {
+      link.classList.add("active");
+    }
+  });
 
-     let observer = new IntersectionObserver((entries, observer) => {
-       entries.forEach(entry => {
-         if (entry.isIntersecting) {
-           let video = entry.target;
-           let source = video.querySelector("source");
-           if (source.dataset.src) {
-             source.src = source.dataset.src;
-             video.load();
-           }
-           observer.unobserve(video);
-         }
-       });
-     });
+  // =========================
+  // ✅ VIDEO LAZY LOAD + PLAY
+  // =========================
+  let lazyVideos = document.querySelectorAll("video.lazy-video");
 
-     lazyVideos.forEach(video => {
-       observer.observe(video);
-     });
-   });
-   
+  let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        let video = entry.target;
+        let source = video.querySelector("source");
+
+        if (source.dataset.src) {
+          source.src = source.dataset.src;
+          video.load();
+        }
+
+        // 👉 force play (important for iPhone)
+        video.play().catch(() => {});
+
+        observer.unobserve(video);
+      }
+    });
+  });
+
+  lazyVideos.forEach(video => {
+    observer.observe(video);
+  });
+
+});
