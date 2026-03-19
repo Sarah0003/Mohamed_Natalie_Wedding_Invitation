@@ -1,50 +1,83 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-  // =========================
-  // ✅ NAVBAR ACTIVE LOGIC
-  // =========================
-  let currentPage = window.location.pathname.split("/").pop();
+//   // =========================
+//   // ✅ NAVBAR ACTIVE LOGIC
+//   // =========================
+//   let currentPage = window.location.pathname.split("/").pop();
 
-  if (currentPage === "" || currentPage === "/") {
-    currentPage = "index.html";
-  }
+//   if (currentPage === "" || currentPage === "/") {
+//     currentPage = "index.html";
+//   }
 
-  let navLinks = document.querySelectorAll(".nav-link[data-page]");
+//   let navLinks = document.querySelectorAll(".nav-link[data-page]");
 
-  navLinks.forEach(link => {
-    link.classList.remove("active");
+//   navLinks.forEach(link => {
+//     link.classList.remove("active");
 
-    if (link.getAttribute("data-page") === currentPage) {
-      link.classList.add("active");
+//     if (link.getAttribute("data-page") === currentPage) {
+//       link.classList.add("active");
+//     }
+//   });
+
+//   // =========================
+//   // ✅ VIDEO LAZY LOAD + PLAY
+//   // =========================
+//   let lazyVideos = document.querySelectorAll("video.lazy-video");
+
+//   let observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         let video = entry.target;
+//         let source = video.querySelector("source");
+
+//         if (source.dataset.src) {
+//           source.src = source.dataset.src;
+//           video.load();
+//         }
+
+//         // 👉 force play (important for iPhone)
+//         video.play().catch(() => {});
+
+//         observer.unobserve(video);
+//       }
+//     });
+//   });
+
+//   lazyVideos.forEach(video => {
+//     observer.observe(video);
+//   });
+
+// });
+
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+
+    // Lazy-load source only once
+    const source = video.querySelector("source");
+    if (source && source.dataset.src && !source.src) {
+      source.src = source.dataset.src;
+      video.load(); // Important: reload after setting src
+    }
+
+    if (entry.isIntersecting) {
+      // Try to play – catch silently (common on iOS)
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.log("Play prevented:", err); // usually NotAllowedError
+        });
+      }
+    } else {
+      video.pause();
     }
   });
+}, {
+  threshold: 0.5, // 50% visible – you can lower to 0.1 or 0.3 if needed
+  rootMargin: "0px" // optional: tweak if videos are near edges
+});
 
-  // =========================
-  // ✅ VIDEO LAZY LOAD + PLAY
-  // =========================
-  let lazyVideos = document.querySelectorAll("video.lazy-video");
-
-  let observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        let video = entry.target;
-        let source = video.querySelector("source");
-
-        if (source.dataset.src) {
-          source.src = source.dataset.src;
-          video.load();
-        }
-
-        // 👉 force play (important for iPhone)
-        video.play().catch(() => {});
-
-        observer.unobserve(video);
-      }
-    });
-  });
-
-  lazyVideos.forEach(video => {
-    observer.observe(video);
-  });
-
+// Attach observer to all lazy-videos
+document.querySelectorAll('video.lazy-video').forEach(video => {
+  observer.observe(video);
 });
