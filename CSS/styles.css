@@ -143,10 +143,55 @@ video {
 
 /* Very small mobile devices (320px to 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
-  /* .video-container {
-    height: 120vh;
+  .res {
+    left: 35%;
+
   }
- */
+
+  .res img {
+    width: 7rem;
+  }
+
+  .res1 {
+    bottom: 17.5rem;
+
+  }
+
+  .res2 {
+    bottom: 15.4rem;
+
+  }
+
+  .res3 {
+    bottom: 13.3rem;
+
+  }
+
+  .res4 {
+    bottom: 11.3rem;
+
+  }
+
+  .res5 {
+    bottom: 9.2rem;
+
+  }
+
+
+  .res6 {
+    bottom: 7.2rem;
+
+  }
+
+  .res7 {
+    bottom: 5.1rem;
+
+  }
+
+  .res8 {
+    bottom: 3rem;
+
+  }
 
   video {
     margin-bottom: -1px;
@@ -211,7 +256,20 @@ video {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .res {
+    left: 35%;
 
+  }
+
+  .res img {
+    width: 10rem;
+  }
+
+
+  .res8 {
+    bottom: 4%;
+
+  }
 
   .navItems li a {
     font-size: 1rem;
@@ -254,6 +312,45 @@ video {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .res {
+    left: 21rem;
+  }
+
+  .res1 {
+    bottom: 13.1rem;
+  }
+
+  .res2 {
+    bottom: 11.5rem;
+  }
+
+  .res3 {
+    bottom: 10rem;
+  }
+
+  .res4 {
+    bottom: 8.5rem;
+  }
+
+  .res5 {
+    bottom: 7rem;
+  }
+
+  .res6 {
+    bottom: 5.5rem;
+  }
+
+  .res7 {
+    bottom: 3.9rem;
+  }
+
+  .res8 {
+    bottom: 2.4rem;
+  }
+
+  /* position: absolute !important;
+  bottom: 3.8rem;
+  left: 9.5rem; */
 
   section .container-fluid .row .col-sm-12 video {
     margin: auto;
@@ -307,6 +404,16 @@ video {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .res img {
+    width: 10%;
+  }
+
+  .res {
+    left: 32%;
+    left: 21rem;
+    bottom: 13.1rem;
+  }
+
   .navItems li a {
     font-size: 0.4rem;
   }
@@ -350,6 +457,10 @@ video {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .res img {
+    width: 10%;
+  }
+
   .navItems li a {
     font-size: 0.48rem;
   }
@@ -418,4 +529,10 @@ video.lazy-video::-webkit-media-controls-overlay-play-button {
 
 video.lazy-video::-webkit-media-controls-play-button {
   display: none !important;
+}
+
+
+
+* {
+  overflow-x: hidden;
 }
