@@ -143,6 +143,54 @@ video {
 
 /* Very small mobile devices (320px to 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
+
+  .get img {
+    width: 60%;
+  }
+
+  .get {
+    left: 28%;
+    top: 10%;
+
+  }
+
+  .get1 {
+    top: 29.5%;
+  }
+
+  .get2 {
+    top: 33.5%;
+  }
+
+  .get3 {
+    top: 37.6%;
+  }
+
+  .get4 {
+    top: 41.7%;
+  }
+
+
+  .get5 {
+    top: 45.8%;
+  }
+
+  .get6 {
+    top: 56.3%;
+  }
+
+  .get7 {
+    top: 60.4%;
+  }
+
+  .get8 {
+    top: 65.4%;
+  }
+
+  .get9 {
+    top: 68.8%;
+  }
+
   .res {
     left: 31%;
 
@@ -257,19 +305,55 @@ video {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .res {
-    left: 35%;
+    left: 31%;
 
   }
 
   .res img {
-    width: 10rem;
+    width: 40%;
   }
 
+  .res1 {
+    bottom: 22.5%;
+
+  }
+
+  .res2 {
+    bottom: 19.8%;
+
+  }
+
+  .res3 {
+    bottom: 17.1%;
+
+  }
+
+  .res4 {
+    bottom: 14.4%;
+
+  }
+
+  .res5 {
+    bottom: 11.6%;
+
+  }
+
+
+  .res6 {
+    bottom: 9%;
+
+  }
+
+  .res7 {
+    bottom: 6.2%;
+
+  }
 
   .res8 {
-    bottom: 4%;
+    bottom: 3.5%;
 
   }
+
 
   .navItems li a {
     font-size: 1rem;
@@ -312,6 +396,57 @@ video {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .get img {
+    width: 30%;
+  }
+
+  .get {
+    left: 41%;
+    top: 10%;
+
+  }
+
+  .get1 {
+    top: 29.3%;
+  }
+
+  .get2 {
+    top: 33.3%;
+  }
+
+  .get3 {
+    top: 37.4%;
+  }
+
+  .get4 {
+    top: 41.5%;
+  }
+
+
+  .get5 {
+    top: 45.5%;
+  }
+
+  .get6 {
+    top: 56%;
+  }
+
+  .get7 {
+    top: 60%;
+  }
+
+  .get8 {
+    top: 65.1%;
+  }
+
+  .get9 {
+    top: 68.5%;
+  }
+
+  .res img {
+    width: 10%;
+  }
+
   .res {
     left: 21rem;
   }
