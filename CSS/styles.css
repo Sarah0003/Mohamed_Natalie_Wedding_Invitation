@@ -144,52 +144,52 @@ video {
 /* Very small mobile devices (320px to 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
   .res {
-    left: 35%;
+    left: 36%;
 
   }
 
   .res img {
-    width: 7rem;
+    width: 28%;
   }
 
   .res1 {
-    bottom: 17.5rem;
+    bottom: 23.5%;
 
   }
 
   .res2 {
-    bottom: 15.4rem;
+    bottom: 20.5%;
 
   }
 
   .res3 {
-    bottom: 13.3rem;
+    bottom: 17.8%;
 
   }
 
   .res4 {
-    bottom: 11.3rem;
+    bottom: 15.2%;
 
   }
 
   .res5 {
-    bottom: 9.2rem;
+    bottom: 12.4%;
 
   }
 
 
   .res6 {
-    bottom: 7.2rem;
+    bottom: 9.8%;
 
   }
 
   .res7 {
-    bottom: 5.1rem;
+    bottom: 6.9%;
 
   }
 
   .res8 {
-    bottom: 3rem;
+    bottom: 4.3%;
 
   }
 
