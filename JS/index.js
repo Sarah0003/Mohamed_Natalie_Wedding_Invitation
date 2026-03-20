@@ -112,8 +112,6 @@
 //   passive: true
 // });
 // document.addEventListener("click", unlockVideos);
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
   // =========================
@@ -135,21 +133,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
   // =========================
-  // ✅ VIDEO OBSERVER (OPTIMIZED)
+  // ✅ VIDEO OBSERVER (SMART)
   // =========================
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const video = entry.target;
 
-      // 🔥 iOS safety (always enforce)
+      // iOS safety
       video.muted = true;
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
 
       // =========================
-      // Lazy-load ONLY when near viewport
+      // Lazy load only when near
       // =========================
       if (entry.isIntersecting) {
         const source = video.querySelector("source");
@@ -161,40 +158,48 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // =========================
-      // Smart play / pause
+      // PLAY when visible enough
       // =========================
-      if (entry.intersectionRatio >= 0.25) {
-        video.muted = true; // 🔥 critical for iOS
+      if (entry.intersectionRatio >= 0.3) {
 
-        const playPromise = video.play();
+        if (!video.dataset.started) {
+          video.dataset.started = "true";
 
-        if (playPromise !== undefined) {
-          playPromise.catch(() => {});
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {});
+          }
+
+        } else if (video.paused) {
+          video.play().catch(() => {});
         }
-      } else {
+
+      }
+
+      // =========================
+      // PAUSE only when FAR away
+      // =========================
+      if (entry.intersectionRatio < 0.05) {
         video.pause();
       }
+
     });
   }, {
-    threshold: 0.25,
+    threshold: [0, 0.05, 0.3],
     rootMargin: "200px 0px"
   });
 
-  // =========================
-  // Attach observer
-  // =========================
   document.querySelectorAll('video.lazy-video').forEach(video => {
     observer.observe(video);
   });
 
-
   // =========================
-  // ✅ iOS FALLBACK (IMPROVED)
+  // ✅ iPhone UNLOCK (once)
   // =========================
-  let videosUnlocked = false;
+  let unlocked = false;
 
   function unlockVideos() {
-    if (videosUnlocked) return;
+    if (unlocked) return;
 
     const videos = document.querySelectorAll("video.lazy-video");
 
@@ -208,13 +213,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            video.pause(); // let observer control playback
+            video.pause(); // allow observer to control later
           })
           .catch(() => {});
       }
     });
 
-    videosUnlocked = true;
+    unlocked = true;
 
     document.removeEventListener("touchstart", unlockVideos);
     document.removeEventListener("click", unlockVideos);
