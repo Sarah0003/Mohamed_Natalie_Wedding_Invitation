@@ -74,43 +74,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// =========================
-// ✅ ADD THIS PART BELOW
-// =========================
-let videosUnlocked = false;
+// // =========================
+// // ✅ ADD THIS PART BELOW
+// // =========================
+// let videosUnlocked = false;
 
-function unlockVideos() {
-  if (videosUnlocked) return;
+// function unlockVideos() {
+//   if (videosUnlocked) return;
 
-  const videos = document.querySelectorAll("video.lazy-video");
+//   const videos = document.querySelectorAll("video.lazy-video");
 
-  videos.forEach(video => {
-    video.muted = true;
-    video.setAttribute("muted", "");
-    video.setAttribute("playsinline", "");
+//   videos.forEach(video => {
+//     video.muted = true;
+//     video.setAttribute("muted", "");
+//     video.setAttribute("playsinline", "");
 
-    const playPromise = video.play();
+//     const playPromise = video.play();
 
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          video.pause(); // important
-        })
-        .catch(() => {});
-    }
-  });
+//     if (playPromise !== undefined) {
+//       playPromise
+//         .then(() => {
+//           video.pause(); // important
+//         })
+//         .catch(() => {});
+//     }
+//   });
 
-  videosUnlocked = true;
+//   videosUnlocked = true;
 
-  // remove listeners after first tap
-  document.removeEventListener("touchstart", unlockVideos);
-  document.removeEventListener("click", unlockVideos);
-}
+//   // remove listeners after first tap
+//   document.removeEventListener("touchstart", unlockVideos);
+//   document.removeEventListener("click", unlockVideos);
+// }
 
-// listen for first tap
-document.addEventListener("touchstart", unlockVideos, {
-  passive: true
-});
-document.addEventListener("click", unlockVideos);
+// // listen for first tap
+// document.addEventListener("touchstart", unlockVideos, {
+//   passive: true
+// });
+// document.addEventListener("click", unlockVideos);
 
 
