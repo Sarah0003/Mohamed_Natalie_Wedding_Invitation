@@ -61,10 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    // threshold: 0.1,
-    // rootMargin: "300px"
-     threshold: [0, 0.05, 0.3],
-         rootMargin: "200px 0px"
+    threshold: 0.25,
+    rootMargin: "300px"
+  
   });
 
   // =========================
