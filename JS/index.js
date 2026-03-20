@@ -249,8 +249,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    threshold: 0,
-    rootMargin: "500px"
+    threshold: 0.1,
+    rootMargin: "300px"
   });
 
   // =========================
