@@ -297,6 +297,7 @@ video {
   }
 
   .navItems:nth-child(2) {
+    padding-left: 0.4rem;
     justify-content: center;
     flex: 0 0 auto;
   }
