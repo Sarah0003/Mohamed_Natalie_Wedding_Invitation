@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    threshold: 0.25,
-    rootMargin: "300px"
+    threshold: 0.1,
+    rootMargin: "500px"
   
   });
 
