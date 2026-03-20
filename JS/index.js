@@ -112,6 +112,11 @@
 //   passive: true
 // });
 // document.addEventListener("click", unlockVideos);
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
   // =========================
@@ -193,41 +198,41 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(video);
   });
 
-  // =========================
-  // ✅ iPhone UNLOCK (once)
-  // =========================
-  let unlocked = false;
-
-  function unlockVideos() {
-    if (unlocked) return;
-
-    const videos = document.querySelectorAll("video.lazy-video");
-
-    videos.forEach(video => {
-      video.muted = true;
-      video.setAttribute("muted", "");
-      video.setAttribute("playsinline", "");
-
-      const playPromise = video.play();
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            video.pause(); // allow observer to control later
-          })
-          .catch(() => {});
-      }
-    });
-
-    unlocked = true;
-
-    document.removeEventListener("touchstart", unlockVideos);
-    document.removeEventListener("click", unlockVideos);
-  }
-
-  document.addEventListener("touchstart", unlockVideos, {
-    passive: true
-  });
-  document.addEventListener("click", unlockVideos);
-
 });
+
+// =========================
+// ✅ iPhone UNLOCK (once)
+// =========================
+let unlocked = false;
+
+function unlockVideos() {
+  if (unlocked) return;
+
+  const videos = document.querySelectorAll("video.lazy-video");
+
+  videos.forEach(video => {
+    video.muted = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          video.pause(); // allow observer to control later
+        })
+        .catch(() => {});
+    }
+  });
+
+  unlocked = true;
+
+  document.removeEventListener("touchstart", unlockVideos);
+  document.removeEventListener("click", unlockVideos);
+}
+
+document.addEventListener("touchstart", unlockVideos, {
+  passive: true
+});
+document.addEventListener("click", unlockVideos);
