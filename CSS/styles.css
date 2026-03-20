@@ -130,6 +130,7 @@ video {
   padding-right: 0;
 }
 
+
 .navItems li:hover a {
   color: #1f3e44ac;
 }
@@ -201,52 +202,52 @@ video {
   }
 
   .res {
-    left: 31%;
+    left: 35.5%;
 
   }
 
   .res img {
-    width: 40%;
+    width: 28%;
   }
 
   .res1 {
-    bottom: 22.5%;
+    bottom: 23.3%;
 
   }
 
   .res2 {
-    bottom: 19.8%;
+    bottom: 20.5%;
 
   }
 
   .res3 {
-    bottom: 17.1%;
+    bottom: 17.9%;
 
   }
 
   .res4 {
-    bottom: 14.4%;
+    bottom: 15.3%;
 
   }
 
   .res5 {
-    bottom: 11.6%;
+    bottom: 12.5%;
 
   }
 
 
   .res6 {
-    bottom: 9%;
+    bottom: 9.8%;
 
   }
 
   .res7 {
-    bottom: 6.2%;
+    bottom: 7%;
 
   }
 
   .res8 {
-    bottom: 3.5%;
+    bottom: 4.3%;
 
   }
 
@@ -260,6 +261,7 @@ video {
   .our-story {
     margin-bottom: -1px;
     margin-top: 0px;
+    color: #fff6f6c6;
   }
 
   .navItems li {
