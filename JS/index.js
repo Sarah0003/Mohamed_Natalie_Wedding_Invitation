@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, {
     threshold: 0,
-    rootMargin: "100px"
+    rootMargin: "300px"
   });
 
   // =========================
