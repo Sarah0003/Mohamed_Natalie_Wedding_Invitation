@@ -47,8 +47,8 @@ let observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.5, // 50% visible – you can lower to 0.1 or 0.3 if needed
-  rootMargin: "0px" // optional: tweak if videos are near edges
+threshold: 0.1,
+  rootMargin: "200px" // optional: tweak if videos are near edges
 });
 
 // Attach observer to all lazy-videos
